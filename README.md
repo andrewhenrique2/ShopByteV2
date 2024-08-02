@@ -1,23 +1,42 @@
+
+
+
+
 <div align="center">
-<span style="font-size: 24px; font-weight: bold; color: white;">ShopByte - Em Desenvolvimento</span>
-<a href="https://skillicons.dev" target="_blank" rel="noopener noreferrer">
+
+ # <span style="font-size: 24px; font-weight: bold; color: white;">ShopByte - Em Desenvolvimento</span>
+ <a href="https://skillicons.dev" target="_blank" rel="noopener noreferrer">
     <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,javascript,tailwind,html,css,git,github,vercel" alt="My Skills" style="margin: 1rem;"/>
-</a>
+  </a>
 <br/>
-<br/>
-Acesse ShopByte Live
 <br/>
 
+# [Acesse ShopByte Live](https://shop-byte.vercel.app)
+
+<br/>
+  
+![shopbyte](https://github.com/user-attachments/assets/088112dc-e29b-43d5-974a-289e2d389970)
 
 </div>
+
+
 <div align="center">
-🖥️ Descrição do Projeto <br/>
+
+
+## 🖥️ Descrição do Projeto <br/>
+
+
 ShopByte é um projeto de e-commerce desenvolvido com React, Next.js, e outras tecnologias modernas. O projeto oferece uma experiência de compra online interativa e responsiva, com diversos componentes e funcionalidades para melhorar a usabilidade e a interação do usuário.
 
+
 </div>
+
+
 <div align="start">
-📦 Funcionalidades
+ 
+## 📦 Funcionalidades
 <br/>
+ 
 Header: Inclui um menu de navegação, barra de pesquisa, ícones de usuário, favoritos e carrinho de compras. <br/>
 Banner: Exibe imagens promocionais com transições suaves usando Framer Motion. <br/>
 Atrativos: Mostra banners de marcas ou promoções especiais. <br/>
@@ -29,8 +48,11 @@ Favoritos: Permite adicionar e remover produtos da lista de favoritos com notifi
 Contagem Regressiva: Exibe o tempo restante para promoções de produtos. <br/>
 Parcelamento: Calcula e exibe as opções de parcelamento para os produtos. <br/>
 </div>
+
+
 <div align="start">
-🚀 Tecnologias Utilizadas
+ 
+## 🚀 Tecnologias Utilizadas 
 <br/>
 React: Biblioteca JavaScript para construção de interfaces de usuário. <br/>
 Next.js: Framework React com funcionalidades de renderização do lado do servidor e geração de sites estáticos. <br/>
@@ -44,28 +66,43 @@ LocalStorage: Utilizado para armazenamento de favoritos. <br/>
 Firebase: Usado para armazenamento de imagens para otimizar o desempenho do frontend. <br/>
 Node.js e Express: Backend para fornecer informações dos produtos. <br/>
 MongoDB: Banco de dados para gerenciar informações dos produtos e usuários. <br/>
+
 </div>
+
 <br/>
-🔧 Instalação e Configuração
+
+
+## 🔧 Instalação e Configuração
 <br/>
-Clone o Repositório
 
-bash
-Copiar código
-git clone https://github.com/seu-usuario/shopbyte.git
-Navegue para o Diretório do Projeto
+Clone o Repositório <br/>
 
-bash
-Copiar código
-cd shopbyte
-Instale as Dependências
 
-bash
-Copiar código
-npm install
-Inicie o Servidor de Desenvolvimento
+bash <br/>
 
-bash
-Copiar código
-npm run dev
-Backend
+Copiar código <br/>
+
+git clone https://github.com/seu-usuario/shopbyte.git <br/>
+
+Navegue para o Diretório do Projeto <br/>
+
+
+bash <br/>
+
+Copiar código <br/>
+
+cd shopbyte <br/>
+
+Instale as Dependências <br/>
+
+
+bash <br/>
+
+Copiar código <br/>
+
+npm install <br/>
+
+Inicie o Servidor de Desenvolvimento <br/>
+
+
+
