@@ -1,1 +1,9 @@
-{}
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js",
+  "/produto/[id]": "pages/produto/[id].js",
+  "/login": "pages/login.js",
+  "/cadastro": "pages/cadastro.js"
+}

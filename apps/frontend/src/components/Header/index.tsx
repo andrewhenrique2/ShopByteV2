@@ -2,10 +2,12 @@ import React, { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaHeart, FaShoppingCart, FaSearch, FaUserCircle, FaBars, FaTimes, FaTrash, FaPlus, FaMinus } from 'react-icons/fa'; // Adicionado FaPlus e FaMinus
-import logo from '../../../public/shopbyte.jpg';
 import { useFavoritos } from '../../utils/FavoritosContext';
 import { useCart } from '../../components/Card/CartContext';
 import { formatCurrency, calculateTotal } from '../../utils/formatPrice';
+
+// URL da imagem do logo armazenada no Firebase Storage
+const logoUrl = 'https://storage.googleapis.com/shopbyte-d1463.appspot.com/public_images/shopbyte.jpg';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -55,7 +57,6 @@ const Header: React.FC = () => {
   };
 
   const handleAddCep = () => {
-    // Lógica para adicionar o CEP, como validação e armazenamento
     console.log('CEP adicionado:', cep);
   };
 
@@ -68,7 +69,7 @@ const Header: React.FC = () => {
         <div className="container mx-auto flex items-center justify-between px-4 md:px-8 lg:px-32">
           <Link href='/' className='flex items-center gap-2'>
             <Image 
-              src={logo} 
+              src={logoUrl} 
               alt="Logo" 
               width={80} 
               height={120} 

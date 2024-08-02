@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import Product from './models/productModel';
+import productRoutes from './routes/productRoutes';
 
 dotenv.config();
 
@@ -25,25 +25,8 @@ mongoose.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Conectado ao MongoDB'))
   .catch((err: Error) => console.error('Erro ao conectar ao MongoDB:', err.message));
 
-// Rotas
-app.get('/api/products', async (req, res) => {
-  try {
-    const products = await Product.find();
-    res.json(products);
-  } catch (err) {
-    res.status(500).json({ message: (err as Error).message });
-  }
-});
-
-app.post('/api/products', async (req, res) => {
-  const product = new Product(req.body);
-  try {
-    const newProduct = await product.save();
-    res.status(201).json(newProduct);
-  } catch (err) {
-    res.status(400).json({ message: (err as Error).message });
-  }
-});
+// Usar as rotas de produtos
+app.use('/api/products', productRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

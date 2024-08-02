@@ -1,6 +1,9 @@
 import Image from "next/image";
-import INTEL from '../../../public/intelbanner.webp';
-import AMD from '../../../public/bannerryzen.jpg';
+
+// URLs das imagens armazenadas no Firebase Storage
+const INTEL_URL = "https://storage.googleapis.com/shopbyte-d1463.appspot.com/public_images/intelbanner.webp";
+const AMD_URL = "https://storage.googleapis.com/shopbyte-d1463.appspot.com/public_images/bannerryzen.jpg";
+
 
 export default function Atrativos() {
     const imageWidth = 650; 
@@ -17,7 +20,7 @@ export default function Atrativos() {
                 }}
             >
                 <Image 
-                    src={AMD} 
+                    src={AMD_URL} 
                     fill
                     alt="AMD Banner" 
                     className="rounded-2xl"
@@ -37,7 +40,7 @@ export default function Atrativos() {
                 }}
             >
                 <Image 
-                    src={INTEL} 
+                    src={INTEL_URL} 
                     fill
                     alt="Intel Banner" 
                     className="rounded-2xl"

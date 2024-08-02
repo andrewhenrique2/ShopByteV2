@@ -1,11 +1,12 @@
 import { FaInstagram, FaTwitter, FaTelegram, FaYoutube, FaFacebook, FaDiscord, FaShieldAlt } from 'react-icons/fa';
 import Image from 'next/image';
-import mercadopago from '../../../public/cartoes.webp';
-import pix from '../../../public/pix.webp';
-import cartao from '../../../public/cartoes.webp';
-import nuPay from '../../../public/nubank.webp';
-import boleto from '../../../public/boleto.webp';
-import googleSafe from '../../../public/google.webp';
+
+// URLs das imagens armazenadas no Firebase Storage
+const mercadopagoUrl = 'https://storage.googleapis.com/shopbyte-d1463.appspot.com/public_images/cartoes.webp';
+const pixUrl = 'https://storage.googleapis.com/shopbyte-d1463.appspot.com/public_images/pix.webp';
+const nuPayUrl = 'https://storage.googleapis.com/shopbyte-d1463.appspot.com/public_images/nubank.webp';
+const boletoUrl = 'https://storage.googleapis.com/shopbyte-d1463.appspot.com/public_images/boleto.webp';
+const googleSafeUrl = 'https://storage.googleapis.com/shopbyte-d1463.appspot.com/public_images/google.webp';
 
 export default function Footer() {
   return (
@@ -17,14 +18,13 @@ export default function Footer() {
           <h2 className="font-bold mb-4">FORMAS DE PAGAMENTO</h2>
           <ul className="space-y-2">
             <li className="flex items-center justify-center gap-2">
-              <Image src={mercadopago} alt="MercadoPago" width={340} height={340} />
+              <Image src={mercadopagoUrl} alt="MercadoPago" width={340} height={340} />
             </li>
               <li className='flex gap-4 object-cover justify-center'>
-              <Image src={pix} alt="Pix" width={60} height={60} />
-              <Image src={nuPay} alt="NuPay" width={60} height={60} />
-              <Image src={boleto} alt="Boleto MP" width={60} height={60} />
+              <Image src={pixUrl} alt="Pix" width={60} height={60} />
+              <Image src={nuPayUrl} alt="NuPay" width={60} height={60} />
+              <Image src={boletoUrl} alt="Boleto MP" width={60} height={60} />
               </li>
-
           </ul>
         </div>
 
@@ -37,7 +37,7 @@ export default function Footer() {
               Empresa Autorizada - Compre & Confie
             </li>
             <li className="flex items-center justify-center gap-2">
-              <Image src={googleSafe} alt="Google - Site Seguro" width={100} height={100} />
+              <Image src={googleSafeUrl} alt="Google - Site Seguro" width={100} height={100} />
               Google - Site Seguro
             </li>
           </ul>
@@ -50,7 +50,6 @@ export default function Footer() {
             <li>Quem somos</li>
             <li>Termos e Condições de Venda</li>
             <li>Política de Troca e Devoluções</li>
-      
           </ul>
         </div>
 
@@ -64,10 +63,6 @@ export default function Footer() {
             <li>Programa de Parceiros</li>
           </ul>
         </div>
-
-
-
-    
 
         {/* Siga-nos */}
         <div className="col-span-2 md:col-span-4 cursor-pointer">

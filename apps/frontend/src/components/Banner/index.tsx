@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { motion, useAnimation } from 'framer-motion';
-import banner1 from '../../../public/b1.jpg';
-import banner2 from '../../../public/b2.jpg';
-import banner3 from '../../../public/b3.jpg';
+
+// URLs das imagens armazenadas no Firebase Storage
+const banner1 = "https://storage.googleapis.com/shopbyte-d1463.appspot.com/public_images/b1.jpg";
+const banner2 = "https://storage.googleapis.com/shopbyte-d1463.appspot.com/public_images/b2.jpg";
+const banner3 = "https://storage.googleapis.com/shopbyte-d1463.appspot.com/public_images/b3.jpg";
 
 const images = [banner1, banner2, banner3];
 
@@ -19,16 +21,14 @@ export default function Banner() {
   const headerRef = useRef<HTMLHeadingElement | null>(null);
 
   useEffect(() => {
-    // Função para definir o padding-top com base na altura do header
     const updatePaddingTop = () => {
       if (headerRef.current) {
         setPaddingTop(headerRef.current.offsetHeight);
       }
     };
 
-    // Adicionar listener para redimensionamento da janela
     window.addEventListener('resize', updatePaddingTop);
-    updatePaddingTop(); // Definir o padding-top inicial
+    updatePaddingTop();
 
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -50,7 +50,7 @@ export default function Banner() {
   return (
     <div
       className="banner-container relative overflow-hidden"
-      style={{ paddingTop: `${paddingTop}px` }} // Aplicando padding-top com base na altura do header
+      style={{ paddingTop: `${paddingTop}px` }}
     >
       <motion.div
         className="flex"
@@ -66,15 +66,13 @@ export default function Banner() {
         {images.map((image, index) => (
           <div
             key={index}
-            className="" // Ajuste para ocupar toda a largura da tela
+            className=""
           >
             <Image
               src={image}
               alt={`banner-${index}`}
-              layout="responsive" // Fodase vai ficar dando erro mesmo porque eu preciso e nao sei como resolver isso.
-              // se quiser remover o erro Image with src "/_next/static/media/b1.08eed0b3.jpg" has legacy prop "layout". Did you forget to run the codemod?   só remover este layout.
               width={1920}
-              height={1080}
+              height={1}
               style={{
                 maxWidth: '100%',
                 height: 'auto',
