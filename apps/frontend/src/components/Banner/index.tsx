@@ -72,7 +72,7 @@ export default function Banner() {
               src={image}
               alt={`banner-${index}`}
               width={1920}
-              height={1}
+              height={1080}
               style={{
                 maxWidth: '100%',
                 height: 'auto',
