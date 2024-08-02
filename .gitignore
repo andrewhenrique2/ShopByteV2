@@ -16,11 +16,12 @@ build/
 *.sqlite
 *.sqlite3
 
+
 # Arquivos de configuração de ambiente
 .env
 .env.local
 .env.*.local
-
+.firebase.json
 # Segredos e credenciais
 apps/backend/secrets/firebase.json
 apps/backend/dist/secrets/firebase.json
