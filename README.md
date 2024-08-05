@@ -11,7 +11,7 @@
 <br/>
 <br/>
 
-# [Acesse ShopByte Live](https://shop-byte.vercel.app)
+# [Acesse ShopByte mais simples sem backend.](https://shop-byte.vercel.app)
 
 <br/>
   
